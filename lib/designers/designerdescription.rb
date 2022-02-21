@@ -1,12 +1,12 @@
 class Designers::DesignerDescription
 
-    attr_accessor :desc 
+    attr_accessor :description
     @@all = []
-    #@@all = ["This is info"]
+    #@@all = ["This is info", "hello"]
 
 
-    def initialize(desc)
-        @desc = desc
+    def initialize(description)
+        @description = description
         save
     end
 

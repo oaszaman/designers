@@ -16,8 +16,10 @@ class Designers::Scraper
             para = doc.css("div.textarea-block p")
 
             para.each do |p|
+                
                 desc = p.text
-                Designers::DesignerDescription.new(desc)
+                
+                Designers::DesignerDescription.new(desc )
             end
 
         end
