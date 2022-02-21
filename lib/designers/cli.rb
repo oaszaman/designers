@@ -8,7 +8,7 @@ class Designers::CLI
 
         list_of_designers
         show_user_list
-
+        get_user_number
     end
 
     def list_of_designers
@@ -22,6 +22,24 @@ class Designers::CLI
         puts "#{index}. #{des.name}" }
         puts "\n"  
     end
+
+    def get_user_number
+        puts "\n#{@@blue}Choose the NUMBER beside the designer that you will like to know more about."
+        chosen_answer = gets.strip.to_i
+        show_designer_for(chosen_answer)
+    end
+
+    def valid_input(input, data)
+        input.to_i <= data.length && input.to_i > 0
+        
+    end
+
+    def show_designer_for(chosen_answer)
+        
+
+    end
+
+
 
 
 
