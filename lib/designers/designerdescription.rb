@@ -1,13 +1,13 @@
 class Designers::DesignerDescription
 
-    attr_accessor :description
+    attr_accessor :d
     @@all = []
-    #@@all = ["This is info", "hello"]
+    #@@all = ["rebecca", "samantha"]
 
+    def initialize(d)
+        @d = d
+        save 
 
-    def initialize(description)
-        @description = description
-        save
     end
 
     def self.all
@@ -15,10 +15,12 @@ class Designers::DesignerDescription
         @@all
     end
 
-    def save
+
+    def save 
         @@all << self
     end
 
+    
 
 
 

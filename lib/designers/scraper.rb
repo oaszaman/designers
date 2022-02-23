@@ -19,7 +19,8 @@ class Designers::Scraper
                 
                 desc = p.text
                 
-                Designers::DesignerDescription.new(desc )
+                
+                Designers::DesignerDescription.new(desc)
             end
 
         end

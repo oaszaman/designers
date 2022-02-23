@@ -1,13 +1,14 @@
 class Designers::CLI
     @@blue="\e[3;34m"
-    @@ublue="\e[4;34m"
+    @@ublue="\e[4;0m"
     @@pink="\e[3;35m"
-    @@brownishred="\e[1;31m"
-    @@black="\e[0m"
+    @@brownishred="\e[3;31m"
+    @@black="\e[1;0m"
     @@white="\e[7m"
 
     def greeting
-        puts "\n#{@@blue}Welcome! If you’re looking to know about 11 Up-And-Coming Designers for 2022, \nthen you’re in the right place. To continue press Y"
+        puts "\n#{@@blue}Welcome! If you’re looking to know about 11 Up-And-Coming Designers for 2022, \nthen you’re in the right place."
+        puts "\n               TO CONTINUE PRESS 'Y'".colorize(:red)
         puts "\n"
         get_y
     
@@ -27,6 +28,8 @@ class Designers::CLI
         list_of_designers
         show_user_list
         get_user_number
+        show_user_description
+        
     end
 
     def list_of_designers
@@ -37,7 +40,7 @@ class Designers::CLI
     def show_user_list
         puts "\n"
         @newdesigners.each.with_index(1) { |n, index| 
-        puts "#{index}. #{n.name}" }
+        puts "#{@@pink}#{index}. #{n.name}" }
         puts "\n"  
     end
 
@@ -56,15 +59,43 @@ class Designers::CLI
     def show_designer_for(chosen_answer)
         newdesigners = @newdesigners[chosen_answer - 1]
         puts "\n#{@@brownishred}About upcoming designer #{newdesigners.name}#{@@black}"
-        
+
     end
 
 ##############################################################
 
+    def description
+        #Designers::Scraper.scrape_description
+        Designers::DesignerDescription.all
+
+    end
+
+
+    def show_user_description
+        #Designers::DesignerDescription.all
+        #Designers::Scraper.scrape_description.text
+        puts description.each.with_index(1) {|txt, ind|
+        puts "\n#{ind}. #{txt.d}"}
+
+        
+
+    end
+
+    
     
     
 
+    
 
+    
+
+    
+
+
+
+    
+
+    
 
 
    
