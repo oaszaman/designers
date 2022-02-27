@@ -1,35 +1,38 @@
 1. if user presses numbers that arent there then go to a prompt that says "try again" or something
 
-1. #<Enumerator:0x000000015e5efcb8>
 
-2. #<Enumerator:0x000000015e5efc68>
+ def show_description_for(chosen_answer)
+        description = @description[chosen_answer - 1]
+        puts "\n#{@@brownishred}About upcoming designer #{description.name}#{@@black}"
+       # show_correct_answer(chosen_answer)
+    end
 
-3. #<Enumerator:0x000000015e5efc18>
+##############################################################
 
-4. #<Enumerator:0x000000015e5efbc8>
+    def paragraphs
+        description = Designers::DesignerDescription.all
+        
+    end
 
-5. #<Enumerator:0x000000015e5efb78>
+    def show_user_desc
+        description.each.with_index(1) { |words, index|
+        puts "\n#{index}. #{words.d}".strip }
+        puts "\nWant to learn more about other designers"
 
-6. #<Enumerator:0x000000015e5efb28>
+    end
 
-7. #<Enumerator:0x000000015e5efad8>
+    #def show_correct_answer(chosen_answer)
 
-8. #<Enumerator:0x000000015e5efa88>
+   #     if chosen_answer == 1 
+   #         puts show_user_desc.at(1)
+   #     else puts "bye"
+  #      end
+  #  end
 
-9. #<Enumerator:0x000000015e5efa38>
 
-10. #<Enumerator:0x000000015e5ef9e8>
+  user input should also be the same as what shows up.
+  find a way to code the descriptions so that the user is choosing
+  that
+  if a user chooses one, show one
 
-11. #<Enumerator:0x000000015e5ef998>
-
-12. #<Enumerator:0x000000015e5ef948>
-
-13. #<Enumerator:0x000000015e5ef8f8>
-
-14. #<Enumerator:0x000000015e5ef8a8>
-
-15. #<Enumerator:0x000000015e5ef858>
-
-16. #<Enumerator:0x000000015e5ef808>
-
-17. #<Enumerator:0x000000015e5ef7b8>
+  this method will use the input to access the data

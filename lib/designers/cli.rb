@@ -28,7 +28,7 @@ class Designers::CLI
         list_of_designers
         show_user_list
         get_user_number
-        show_user_description
+        
         
     end
 
@@ -47,7 +47,7 @@ class Designers::CLI
     def get_user_number
         puts "\n#{@@blue}Choose the NUMBER beside the designer that you will like to know more about."
         chosen_answer = gets.strip.to_i
-        show_designer_for(chosen_answer)
+        show_statement_for(chosen_answer)
     end
 
     def valid_input(input, data)
@@ -56,47 +56,25 @@ class Designers::CLI
     end
 
 
-    def show_designer_for(chosen_answer)
-        newdesigners = @newdesigners[chosen_answer - 1]
-        puts "\n#{@@brownishred}About upcoming designer #{newdesigners.name}#{@@black}"
-
+    def show_statement_for(chosen_answer)
+        designer = @newdesigners[chosen_answer - 1]
+        puts "\n#{@@brownishred}You chose #{designer.name}#{@@black}"
+        show_user_para(chosen_answer)
     end
 
-##############################################################
+    def show_user_para(chosen_answer)
+        indepth = Designers::DesignerDescription.all
+        #indepth.each.with_index(1) { |words, ind|
+       # "\n#{ind}. #{words.d}".strip }
 
-    def description
-        #Designers::Scraper.scrape_description
-        Designers::DesignerDescription.all
-
-    end
-
-
-    def show_user_description
-        #Designers::DesignerDescription.all
-        #Designers::Scraper.scrape_description.text
-        puts description.each.with_index(1) {|txt, ind|
-        puts "\n#{ind}. #{txt.d}"}
+       hopes = indepth[chosen_answer - 1]
+       puts "\nThe following is true #{hopes.d}"
+        
 
         
 
     end
-
     
     
-    
-
-    
-
-    
-
-    
-
-
-
-    
-
-    
-
-
    
 end
