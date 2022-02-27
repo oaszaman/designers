@@ -1,6 +1,6 @@
 class Designers::CLI
     @@blue="\e[3;34m"
-    @@ublue="\e[4;0m"
+    @@ublue="\e[3;0m"
     @@pink="\e[3;35m"
     @@brownishred="\e[3;31m"
     @@black="\e[1;0m"
@@ -43,7 +43,12 @@ class Designers::CLI
     def get_user_number
         puts "\n#{@@blue}Choose the NUMBER beside the designer that you will like to know more about."
         chosen_answer = gets.strip.to_i
-        show_statement_for(chosen_answer)
+        show_statement_for(chosen_answer) if valid_input(chosen_answer, @newdesigners)
+        if valid_input(chosen_answer, @newdesigners) != chosen_answer
+            puts "Please try again".colorize(:red)
+        end
+       
+        
     end
 
     def valid_input(input, data)
