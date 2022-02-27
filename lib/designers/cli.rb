@@ -15,21 +15,17 @@ class Designers::CLI
     end
 
     def get_y
-
         input = gets.strip
         if input == "y" || input == "Y"
             puts continue
         else exit
         end
-
     end
 
     def continue
         list_of_designers
         show_user_list
-        get_user_number
-        
-        
+        get_user_number 
     end
 
     def list_of_designers
@@ -51,28 +47,33 @@ class Designers::CLI
     end
 
     def valid_input(input, data)
-        input.to_i <= data.length && input.to_i > 0
-        
+        input.to_i <= data.length && input.to_i > 0  
     end
 
 
     def show_statement_for(chosen_answer)
         designer = @newdesigners[chosen_answer - 1]
-        puts "\n#{@@brownishred}You chose #{designer.name}#{@@black}"
+        puts "\n#{@@pink}You chose #{designer.name}#{@@black}"
+        puts "\n"
         show_user_para(chosen_answer)
     end
 
     def show_user_para(chosen_answer)
         indepth = Designers::DesignerDescription.all
-        #indepth.each.with_index(1) { |words, ind|
-       # "\n#{ind}. #{words.d}".strip }
-
-       hopes = indepth[chosen_answer - 1]
-       puts "\nThe following is true #{hopes.d}"
+       para = indepth[chosen_answer - 1]
+       puts "#{para.d}".strip
+       puts "\n"
         
+       want_more
+    end
 
-        
-
+    def want_more
+        puts "#{@@blue}Would you like to see another designer? If so, press 'Y'. If not, press any key to exit. Hope you enjoyed!"
+        input = gets.strip
+        if input == "y" || input == "Y"
+            puts continue
+        else exit
+        end
     end
     
     

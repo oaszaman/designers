@@ -2,7 +2,7 @@ class Designers::DesignerDescription
 
     attr_accessor :d
     @@all = []
-    #@@all = ["rebecca", "samantha"]
+    
 
     def initialize(d)
         @d = d
