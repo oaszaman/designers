@@ -7,9 +7,10 @@ Welcome to the Designers CLI! This CLI will tell you about 11 Up-And-Coming Fash
 To install, clone this project and open in your terminal.
 
 ## Usage
-Then execute:
+And then execute:
 
-$ ./bin/designers
+    $ bundle
+
 
 and follow along with the prompts
 
