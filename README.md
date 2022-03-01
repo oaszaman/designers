@@ -9,7 +9,7 @@ To install, clone this project and open in your terminal.
 ## Usage
 And then execute:
 
-    $ bundle
+    $ ./bin/designers
 
 
 and follow along with the prompts
