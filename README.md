@@ -1,28 +1,17 @@
 # Designers
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/designers`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the Designers CLI! This CLI will tell you about 11 Up-And-Coming Fashion Designers to look forward to in 2022! 
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'designers'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install designers
+To install, clone this project and open in your terminal.
 
 ## Usage
+Then execute:
 
-TODO: Write usage instructions here
+$ ./bin/designers
+
+and follow along with the prompts
 
 ## Development
 
@@ -32,8 +21,11 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/designers. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/designers/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/oaszaman/designers. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/oaszaman/designers/blob/master/CODE_OF_CONDUCT.md).
 
 ## Code of Conduct
 
 Everyone interacting in the Designers project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/designers/blob/master/CODE_OF_CONDUCT.md).
+
+
+
